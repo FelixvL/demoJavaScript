@@ -7,3 +7,24 @@
     --bar-color-fill: hsl(0, 50%, 50%);
     --bar-width: 400px;
 }
+
+.budget__bar {
+    position: relative;
+    height: 10px;
+    width: 400px;
+    border-radius: 4px;
+    background-color: var(--bar-color);
+    margin-bottom: 50px;
+  }
+  .budget__bar-fill {
+    position: absolute;
+    height: 10px;
+    width: var(--bar-width);
+    border-radius: 4px;
+    background-color: var(--bar-color-fill);
+  }
+
+h1,
+h2{
+    text-align: center;
+}
