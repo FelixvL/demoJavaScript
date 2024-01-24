@@ -1,0 +1,9 @@
+:root{
+    font-family: 'Roboto Slab', sans-serif;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    --bar-color: hsl(0, 50%, 50%);
+    --bar-color-fill: hsl(0, 50%, 50%);
+    --bar-width: 400px;
+}
