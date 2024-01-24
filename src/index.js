@@ -1,3 +1,13 @@
+if (
+  navigator.userAgent.indexOf("MSIE") !== -1 ||
+  navigator.appVersion.indexOf("Trident/") > -1
+) {
+  console.log("not IE!");
+  /* Microsoft Internet Explorer detected in. */
+} else {
+  console.log("not IE!");
+}
+
 let counter = 0;
 
 const elMap = {
@@ -86,22 +96,13 @@ class BudgetApp {
 
   async fetchTransactions() {
     const response = await fetch(
-      new URL("./transactions.json", import.meta.url)
+      new URL("../transactions.json", import.meta.url)
     );
     if (response.status === 200) {
       const data = await response.json();
       this.list = data;
     }
   }
-
-  /**
-   * Typescript supports JSDocs
-   * VSCode runs Typescript compiler under the hood
-   *
-   * JSDocs annotations
-   * @param {HTMLElement} ev
-   * @returns
-   */
   submitForm(ev) {
     ev.preventDefault();
     const formElems = ev.target.elements;
