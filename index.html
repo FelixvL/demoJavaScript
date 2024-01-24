@@ -13,5 +13,24 @@
     <div class="budget__bar">
         <div class="budget__bar-fill"></div>
     </div>
+    <form id="transaction-form">
+        <div class="radio-group">
+          <div class="radio">
+            <label for="input-type-expense">Expense</label>
+            <input id="input-type-expense" name="input-type" type="radio" checked />
+          </div>
+          <div class="radio">
+            <label for="input-type-income">Income</label>
+            <input id="input-type-income" name="input-type" type="radio" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="input-name">Name</label>
+          <input id="input-name" type="text" name="name" />
+          <label for="input-amount">Amount</label>
+          <input id="input-amount" type="number" name="amount" />
+        </div>
+        <button>+</button>
+      </form>
 </body>
 </html>

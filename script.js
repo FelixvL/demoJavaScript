@@ -68,6 +68,17 @@ class BudgetApp{
             this.list = data;
         }
     }
+    submitForm(ev) {
+        ev.preventDefault();
+        const formElems = ev.target.elements;
+        const amount = parseFloat(formElems['amount'].value);
+        const name = formElems['name'].value;
+        const expense = formElems['input-type-expense'].checked;
+        if (!amount || !name) {
+          return;
+        }
+        this.list = [{ amount, name, expense }, ...this.list];
+      }
 
 
 }
