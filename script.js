@@ -2,6 +2,7 @@ let counter = 0;
 
 const elMap = {
     budget : document.querySelector('.budget'),
+    form : document.getElementById('transaction-form'),
 }
 
 class BudgetApp{
@@ -20,6 +21,7 @@ class BudgetApp{
         console.log('nieuwe budgetapp');
         this.list = [];
         this.fetchTransactions();
+        elMap.form.addEventListener('submit',this.submitForm.bind(this))
     }
     recalculateBudget(){
         const totalIncome = this.list.length
