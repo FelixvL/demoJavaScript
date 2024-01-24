@@ -1,3 +1,13 @@
+if (
+  navigator.userAgent.indexOf("MSIE") !== -1 ||
+  navigator.appVersion.indexOf("Trident/") > -1
+) {
+  console.log("not IE!");
+  /* Microsoft Internet Explorer detected in. */
+} else {
+  console.log("not IE!");
+}
+
 let counter = 0;
 
 const elMap = {
@@ -86,7 +96,7 @@ class BudgetApp {
 
   async fetchTransactions() {
     const response = await fetch(
-      new URL("./transactions.json", import.meta.url)
+      new URL("../transactions.json", import.meta.url)
     );
     if (response.status === 200) {
       const data = await response.json();
