@@ -28,3 +28,45 @@ h1,
 h2{
     text-align: center;
 }
+
+.transaction-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ddd;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+  }
+  
+  input[type='number'] {
+    width: 70px;
+  }
+  
+  input[type='text'] {
+    width: 120px;
+  }
+  

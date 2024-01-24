@@ -3,6 +3,7 @@ let counter = 0;
 const elMap = {
     budget : document.querySelector('.budget'),
     form : document.getElementById('transaction-form'),
+    list: document.querySelector('.transaction-list')
 }
 
 class BudgetApp{
@@ -57,6 +58,22 @@ class BudgetApp{
 
     }
     render(){
+        elMap.list.innerHTML = this.list
+        .map(
+          (item) => `
+            <li class="item">
+              <div class="item__name">${item.name}</div>
+              <div class="item__amount">
+                ${item.expense ? '-' : '+'}
+                ${new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(
+                  item.amount,
+                )}
+              </div>
+            </li>
+          `,
+        )
+        .join('');
+
         elMap.budget.innerText = new Intl.NumberFormat('nl-NL',{
             style:'currency',
             currency:'EUR'
