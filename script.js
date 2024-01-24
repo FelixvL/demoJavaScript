@@ -45,6 +45,14 @@ class BudgetApp{
 
         console.log(percentageLeft);
         console.log(barWith);
+
+        const stylesheet = document.styleSheets[0];
+        const rule = [...stylesheet.cssRules].find((r)=> r.selectorText === ':root');
+        rule.style.setProperty('--bar-width',`${barWith}px`)
+        rule.style.setProperty('--bar-color',`hsl(${percentageLeft}, 50%, 70%`)
+        rule.style.setProperty('--bar-color-fill',`hsl(${percentageLeft}, 50%, 50%`)
+
+
     }
     render(){
         elMap.budget.innerText = new Intl.NumberFormat('nl-NL',{
